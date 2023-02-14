@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import Header from './components/Header';
+import Home from './pages/Home';
+import Gallery from './pages/Gallery';
+import Contact from './pages/Contact';
 
 function App() {
+const [whatToRender, setWhatToRender] = useState("home")
+function Render(){
+  switch(whatToRender){
+    case "home":
+      return <Home />
+    case "gallery":
+      return <Gallery />
+    case "contact":
+      return <Contact />
+  }
+}
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header whatToRender = {whatToRender} setWhatToRender = {setWhatToRender}/>
+      <div>
+        <Render />
+      </div>
     </div>
   );
 }
 
 export default App;
+
+{/* <Routes>
+            <Route path="/home" element={<Home/>} />
+            <Route path="/gallery" element={<Gallery/>} />
+            <Route path="/contact" element={<Contact/>} />
+          </Routes> */}
