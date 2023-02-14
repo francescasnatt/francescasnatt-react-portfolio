@@ -3,7 +3,7 @@ This is a React-based web design portfolio project that showcases my web design 
 
 ## USER STORY
 
-As a web design client or potential employer, I want to view the designer's portfolio to assess their skills and expertise in web design.
+> As a web design client or potential employer, I want to view the designer's portfolio to assess their skills and expertise in web design.
 
 ## DESCRIPTION
 
@@ -19,8 +19,8 @@ To use this web design portfolio project, simply navigate to the homepage using 
 
 To run this project locally, you will need to have Node.js installed on your computer. Clone the project repository, navigate to the project directory in your terminal, and run the following commands:
 
-> npm install
-> npm start
+`npm install`
+`npm start`
 
 This will start the project in your web browser at http://localhost:3000.
 
